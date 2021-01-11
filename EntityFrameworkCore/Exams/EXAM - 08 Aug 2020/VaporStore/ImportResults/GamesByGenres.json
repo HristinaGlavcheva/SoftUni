@@ -1,0 +1,50 @@
+[
+  {
+    "Id": 5,
+    "Genre": "Warframe",
+    "Games": [],
+    "TotalPlayers": []
+  },
+  {
+    "Id": 11,
+    "Genre": "Black Desert Online",
+    "Games": [],
+    "TotalPlayers": []
+  },
+  {
+    "Id": 15,
+    "Genre": "Path of Exile",
+    "Games": [],
+    "TotalPlayers": []
+  },
+  {
+    "Id": 20,
+    "Genre": "Dead by Daylight",
+    "Games": [],
+    "TotalPlayers": []
+  },
+  {
+    "Id": 40,
+    "Genre": "Rust",
+    "Games": [],
+    "TotalPlayers": []
+  },
+  {
+    "Id": 63,
+    "Genre": "Conan Exiles",
+    "Games": [],
+    "TotalPlayers": []
+  },
+  {
+    "Id": 70,
+    "Genre": "Soul at Stake",
+    "Games": [],
+    "TotalPlayers": []
+  },
+  {
+    "Id": 74,
+    "Genre": "The Witcher 3: Wild Hunt",
+    "Games": [],
+    "TotalPlayers": []
+  }
+]

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUS.HTTP", "SUS.HTTP\SUS.HTTP.csproj", "{D4B75D15-6D78-4788-8AFA-D2DF7E1D0EAB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUS.MvcFramework", "SUS.MvcFramework\SUS.MvcFramework.csproj", "{53569189-C2AC-4856-B43D-EB04D45F6460}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D4B75D15-6D78-4788-8AFA-D2DF7E1D0EAB} = {D4B75D15-6D78-4788-8AFA-D2DF7E1D0EAB}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apps", "Apps", "{1F85C812-FC2C-49D5-ABFB-F0F8E08AF054}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyFirstMvcApp", "Apps\MyFirstMvcApp\MyFirstMvcApp.csproj", "{BF114335-C67F-4C77-A237-435E44D4AE87}"
+	ProjectSection(ProjectDependencies) = postProject
+		{53569189-C2AC-4856-B43D-EB04D45F6460} = {53569189-C2AC-4856-B43D-EB04D45F6460}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusacaMvcApp - Exam 18 Dec 2018", "MusacaMvcApp - Exam 18 Dec 2018\MusacaMvcApp - Exam 18 Dec 2018.csproj", "{51A42AD7-E59D-4A6C-9FDA-7C4B894A6B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SUS.MvcFramework.Tests", "SUS.MvcFramework.Tests\SUS.MvcFramework.Tests.csproj", "{EA2E4147-3C38-4326-8567-42EF812874B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4B75D15-6D78-4788-8AFA-D2DF7E1D0EAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B75D15-6D78-4788-8AFA-D2DF7E1D0EAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B75D15-6D78-4788-8AFA-D2DF7E1D0EAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B75D15-6D78-4788-8AFA-D2DF7E1D0EAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53569189-C2AC-4856-B43D-EB04D45F6460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53569189-C2AC-4856-B43D-EB04D45F6460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53569189-C2AC-4856-B43D-EB04D45F6460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53569189-C2AC-4856-B43D-EB04D45F6460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF114335-C67F-4C77-A237-435E44D4AE87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF114335-C67F-4C77-A237-435E44D4AE87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF114335-C67F-4C77-A237-435E44D4AE87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF114335-C67F-4C77-A237-435E44D4AE87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51A42AD7-E59D-4A6C-9FDA-7C4B894A6B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A42AD7-E59D-4A6C-9FDA-7C4B894A6B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A42AD7-E59D-4A6C-9FDA-7C4B894A6B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A42AD7-E59D-4A6C-9FDA-7C4B894A6B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA2E4147-3C38-4326-8567-42EF812874B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2E4147-3C38-4326-8567-42EF812874B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2E4147-3C38-4326-8567-42EF812874B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2E4147-3C38-4326-8567-42EF812874B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BF114335-C67F-4C77-A237-435E44D4AE87} = {1F85C812-FC2C-49D5-ABFB-F0F8E08AF054}
+		{51A42AD7-E59D-4A6C-9FDA-7C4B894A6B80} = {1F85C812-FC2C-49D5-ABFB-F0F8E08AF054}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8BD90D9A-9395-490F-A8B6-DD0DBE0A27E7}
+	EndGlobalSection
+EndGlobal
