@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Sort Even Numbers", "01. Sort Even Numbers\01. Sort Even Numbers.csproj", "{91A0992C-289B-4A37-82CC-0A382BB712DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Sum Numbers", "02. Sum Numbers\02. Sum Numbers.csproj", "{D2549FBE-3928-4825-B508-06B7D8EB13B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Count Uppercase Words", "03. Count Uppercase Words\03. Count Uppercase Words.csproj", "{80845D40-CDF7-4885-983E-F3D2205DAEF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Add VAT", "04. Add VAT\04. Add VAT.csproj", "{C0801228-264B-415C-ABF6-0BED420A1637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Filter By Age", "05. Filter By Age\05. Filter By Age.csproj", "{694902D1-88C0-4EC3-B7BC-1AB6ABD2719D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Filter By Age - 2", "05. Filter By Age - 2\05. Filter By Age - 2.csproj", "{ED90C2CD-C4B4-4EA5-B28D-A40188AE97C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91A0992C-289B-4A37-82CC-0A382BB712DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91A0992C-289B-4A37-82CC-0A382BB712DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91A0992C-289B-4A37-82CC-0A382BB712DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91A0992C-289B-4A37-82CC-0A382BB712DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2549FBE-3928-4825-B508-06B7D8EB13B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2549FBE-3928-4825-B508-06B7D8EB13B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2549FBE-3928-4825-B508-06B7D8EB13B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2549FBE-3928-4825-B508-06B7D8EB13B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80845D40-CDF7-4885-983E-F3D2205DAEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80845D40-CDF7-4885-983E-F3D2205DAEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80845D40-CDF7-4885-983E-F3D2205DAEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80845D40-CDF7-4885-983E-F3D2205DAEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0801228-264B-415C-ABF6-0BED420A1637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0801228-264B-415C-ABF6-0BED420A1637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0801228-264B-415C-ABF6-0BED420A1637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0801228-264B-415C-ABF6-0BED420A1637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{694902D1-88C0-4EC3-B7BC-1AB6ABD2719D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{694902D1-88C0-4EC3-B7BC-1AB6ABD2719D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{694902D1-88C0-4EC3-B7BC-1AB6ABD2719D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{694902D1-88C0-4EC3-B7BC-1AB6ABD2719D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED90C2CD-C4B4-4EA5-B28D-A40188AE97C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED90C2CD-C4B4-4EA5-B28D-A40188AE97C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED90C2CD-C4B4-4EA5-B28D-A40188AE97C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED90C2CD-C4B4-4EA5-B28D-A40188AE97C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E68DD80B-2DFA-47BE-A4F5-1DB4980C86B7}
+	EndGlobalSection
+EndGlobal
