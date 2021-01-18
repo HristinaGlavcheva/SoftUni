@@ -6,9 +6,9 @@ namespace P01_RawData
 {
     public class Car
     {
-        private Tire[] tires;
+        private ICollection<Tire> tires;
 
-        public Car(string model, Engine engine, Cargo cargo, params Tire[] tires)
+        public Car(string model, Engine engine, Cargo cargo, ICollection<Tire> tires)
         {
             this.Model = model;
             this.Engine = engine;
@@ -26,7 +26,7 @@ namespace P01_RawData
         {
             get
             {
-                return tires;
+                return (IReadOnlyCollection<Tire>)tires;
             }
         }
     }

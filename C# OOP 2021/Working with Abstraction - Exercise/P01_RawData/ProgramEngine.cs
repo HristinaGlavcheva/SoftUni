@@ -6,8 +6,8 @@ namespace P01_RawData
 {
     public class ProgramEngine
     {
-        private readonly List<Car> cars;
-        private readonly List<Tire> tires;
+        private readonly ICollection<Car> cars;
+        private readonly ICollection<Tire> tires;
 
         public ProgramEngine()
         {
@@ -74,7 +74,7 @@ namespace P01_RawData
             }
         }
 
-        private Car CreateCar(string model, Engine engine, Cargo cargo, List<Tire> tires)
+        private Car CreateCar(string model, Engine engine, Cargo cargo, ICollection<Tire> tires)
         {
             Car car = new Car(model, engine, cargo, tires.ToArray());
 
