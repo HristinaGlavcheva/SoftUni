@@ -38,12 +38,12 @@ namespace P03_JediGalaxy
                 int evilRow = evilCoordinates[0];
                 int evilCol = evilCoordinates[1];
 
-                MoveEvilToTopLeftCorner(evilRow, evilCol);
+                this.MoveEvilToTopLeftCorner(evilRow, evilCol);
 
                 int playerRow = playerCoordinates[0];
                 int playerCol = playerCoordinates[1];
 
-                MovePlayerToTopRightCorner(playerRow, playerCol);
+                this.MovePlayerToTopRightCorner(playerRow, playerCol);
 
                 command = Console.ReadLine();
             }
