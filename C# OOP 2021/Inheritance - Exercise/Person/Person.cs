@@ -21,7 +21,7 @@ namespace Person
                 return this.age; 
             }
 
-            set
+            protected set
             {
                 if (value < 0)
                 {

@@ -16,7 +16,7 @@ namespace Person
             {
                 return base.Age;
             }
-            set
+            protected set
             {
                 if (value > 15)
                 {
