@@ -9,8 +9,11 @@ namespace BorderControl
     {
         public static void Main(string[] args)
         {
-            Engine engine = new Engine(new ConsoleReader(), new ConsoleWriter());
-            engine.Run();
+            EngineBorderControl engineBorderControl = new EngineBorderControl(new ConsoleReader(), new ConsoleWriter());
+            engineBorderControl.Run();
+
+            //EngineFoodShortage engineFoodShortage = new EngineFoodShortage(new ConsoleReader(), new ConsoleWriter());
+            //engineFoodShortage.Run();
         }
     }
 }

@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonInfo", "Interfaces And Abstraction - Exercise\PersonInfo.csproj", "{C01F25C1-D19C-4E00-AD6E-0EBDE9D8EE2A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Telephony", "Telephony\Telephony.csproj", "{2C06B0D6-C4FB-4BD7-9C7F-46A1428A0CDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BorderControl", "BorderControl\BorderControl.csproj", "{FEB0A29D-EDC6-4ECB-92BF-C0AD6A7F5F51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BorderControl", "BorderControl\BorderControl.csproj", "{FEB0A29D-EDC6-4ECB-92BF-C0AD6A7F5F51}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonInfo", "PersonInfo\PersonInfo.csproj", "{F077A7FD-40EA-4803-8A15-32C98D9C3696}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C01F25C1-D19C-4E00-AD6E-0EBDE9D8EE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C01F25C1-D19C-4E00-AD6E-0EBDE9D8EE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C01F25C1-D19C-4E00-AD6E-0EBDE9D8EE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C01F25C1-D19C-4E00-AD6E-0EBDE9D8EE2A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2C06B0D6-C4FB-4BD7-9C7F-46A1428A0CDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2C06B0D6-C4FB-4BD7-9C7F-46A1428A0CDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C06B0D6-C4FB-4BD7-9C7F-46A1428A0CDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{FEB0A29D-EDC6-4ECB-92BF-C0AD6A7F5F51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEB0A29D-EDC6-4ECB-92BF-C0AD6A7F5F51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEB0A29D-EDC6-4ECB-92BF-C0AD6A7F5F51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F077A7FD-40EA-4803-8A15-32C98D9C3696}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F077A7FD-40EA-4803-8A15-32C98D9C3696}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F077A7FD-40EA-4803-8A15-32C98D9C3696}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F077A7FD-40EA-4803-8A15-32C98D9C3696}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
