@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Text;
 using MilitaryElite.Contracts;
 using MilitaryElite.Enumerations;
 using MilitaryElite.Exceptions;
@@ -26,6 +26,16 @@ namespace MilitaryElite.Models
             }
 
             return corps;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine(base.ToString())
+                .AppendLine($"Corps: {this.Corps}");
+
+            return sb.ToString().TrimEnd();
         }
     }
 }

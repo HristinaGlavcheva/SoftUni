@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MilitaryElite.Contracts;
+using MilitaryElite.Core;
+using MilitaryElite.Models;
+using System;
 
 namespace MilitaryElite
 {
@@ -6,7 +9,8 @@ namespace MilitaryElite
     {
         public static void Main(string[] args)
         {
-            
+            Engine engine = new Engine();
+            engine.Run();
         }
     }
 }
