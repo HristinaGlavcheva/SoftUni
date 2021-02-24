@@ -1,5 +1,6 @@
-﻿using P02._WildFarm.Common;
-using System;
+﻿using System;
+
+using P02._WildFarm.Common;
 
 namespace P02._WildFarm.Models.Animals
 {

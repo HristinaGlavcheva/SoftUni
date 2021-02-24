@@ -1,6 +1,7 @@
-﻿using P02._WildFarm.Models.Foods;
-using System;
+﻿using System;
 using System.Collections.Generic;
+
+using P02._WildFarm.Models.Foods;
 
 namespace P02._WildFarm.Models.Animals
 {
@@ -26,6 +27,6 @@ namespace P02._WildFarm.Models.Animals
         protected override double WeightIncreasmentPerPortion
             => WeightIncreasmentCoeficient;
 
-        protected override ICollection<Type> AllowedFoods { get;  }
+        protected override ICollection<Type> AllowedFoods { get; }
     }
 }

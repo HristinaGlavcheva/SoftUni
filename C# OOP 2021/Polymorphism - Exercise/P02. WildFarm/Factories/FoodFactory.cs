@@ -1,6 +1,7 @@
-﻿using P02._WildFarm.Common;
+﻿using System;
+
+using P02._WildFarm.Common;
 using P02._WildFarm.Models.Foods;
-using System;
 
 namespace P02._WildFarm.Factories
 {

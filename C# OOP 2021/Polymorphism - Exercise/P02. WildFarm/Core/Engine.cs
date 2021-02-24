@@ -1,9 +1,10 @@
-﻿using P02._WildFarm.Factories;
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+
+using P02._WildFarm.Factories;
 using P02._WildFarm.Models.Animals;
 using P02._WildFarm.Models.Foods;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace P02._WildFarm.Core
 {

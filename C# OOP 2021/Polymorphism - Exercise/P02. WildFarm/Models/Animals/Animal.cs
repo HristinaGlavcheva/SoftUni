@@ -1,7 +1,8 @@
-﻿using P02._WildFarm.Common;
-using P02._WildFarm.Models.Foods;
-using System;
+﻿using System;
 using System.Collections.Generic;
+
+using P02._WildFarm.Common;
+using P02._WildFarm.Models.Foods;
 
 namespace P02._WildFarm.Models.Animals
 {
@@ -64,17 +65,17 @@ namespace P02._WildFarm.Models.Animals
             }
         }
 
+        public abstract string ProduceSound();
+
         protected abstract double WeightIncreasmentPerPortion { get; }
 
         protected abstract ICollection<Type> AllowedFoods { get; }
 
-        public abstract string ProduceSound();
-
         public void Eat(Food food)
         {
-            if (!this.AllowedFoods.Contains(typeof(Food)))
+            if (!this.AllowedFoods.Contains(food.GetType()))
             {
-                throw new InvalidOperationException(string.Format(ExceptionMessages.InappropriateFoodMessage, this.Name, food.GetType().Name));
+                throw new InvalidOperationException(string.Format(ExceptionMessages.InappropriateFoodMessage, this.GetType().Name, food.GetType().Name));
             }
 
             this.Weight += food.Quantity * this.WeightIncreasmentPerPortion;

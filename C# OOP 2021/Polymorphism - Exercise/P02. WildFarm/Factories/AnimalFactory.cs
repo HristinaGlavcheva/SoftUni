@@ -1,6 +1,7 @@
-﻿using P02._WildFarm.Common;
+﻿using System;
+
+using P02._WildFarm.Common;
 using P02._WildFarm.Models.Animals;
-using System;
 
 namespace P02._WildFarm.Factories
 {
@@ -22,7 +23,7 @@ namespace P02._WildFarm.Factories
             {
                 string livingRegion = animalArgs[3];
                 string breed = animalArgs[4];
-                return new Cat(name, weight, livingRegion, breed);
+                return new Tiger(name, weight, livingRegion, breed);
             }
             else if (type == "dog")
             {
