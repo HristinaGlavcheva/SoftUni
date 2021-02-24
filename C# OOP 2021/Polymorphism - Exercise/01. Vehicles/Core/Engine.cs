@@ -17,6 +17,7 @@ namespace _01._Vehicles.Core
             this.vehicleFactory = new VehicleFactory();
             this.commands = new Dictionary<string, ICommand>();
             this.commands.Add("Drive", new DriveCommand());
+            this.commands.Add("DriveEmpty", new DriveEmptyCommand());
             this.commands.Add("Refuel", new RefuelCommand());
         }
 
@@ -24,6 +25,7 @@ namespace _01._Vehicles.Core
         {
             Vehicle car = CreateVehicle();
             Vehicle truck = CreateVehicle();
+            Vehicle bus = CreateVehicle();
 
             int countCommands = int.Parse(Console.ReadLine());
 
@@ -40,7 +42,7 @@ namespace _01._Vehicles.Core
                     if (this.commands.ContainsKey(commandType))
                     {
                         ICommand command = this.commands[commandType];
-                        command.Execute(car, truck, commandArgs);
+                        command.Execute(car, truck, bus, commandArgs);
                     }
                 }
                 catch (Exception ex)
@@ -51,6 +53,7 @@ namespace _01._Vehicles.Core
 
             Console.WriteLine(car);
             Console.WriteLine(truck);
+            Console.WriteLine(bus);
         }
 
         private Vehicle CreateVehicle()
@@ -62,9 +65,10 @@ namespace _01._Vehicles.Core
             string type = vehicleInput[0];
             double fuelQuantity = double.Parse(vehicleInput[1]);
             double fuelConsumption = double.Parse(vehicleInput[2]);
+            double tankCapacity = double.Parse(vehicleInput[3]);
 
-            Vehicle car = this.vehicleFactory.CreateVehicle(type, fuelQuantity, fuelConsumption);
-            return car;
+            Vehicle vehicle = this.vehicleFactory.CreateVehicle(type, fuelQuantity, fuelConsumption, tankCapacity);
+            return vehicle;
         }
     }
 }

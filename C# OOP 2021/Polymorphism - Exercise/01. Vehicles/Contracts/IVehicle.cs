@@ -6,8 +6,12 @@
 
         double FuelConsumption { get; }
 
-        string Drive(double kilometers);
+        double FuelConsumptionEmpty { get; }
 
-        void Refuel(double liters);
+        double KeepedFuelCoeficient { get; }
+
+        string Drive(double distance, double fuelConsumption);
+
+        void Refuel(double liters, double keepedFuelCoeficient);
     }
 }
