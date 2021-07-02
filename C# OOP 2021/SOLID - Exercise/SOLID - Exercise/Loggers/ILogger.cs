@@ -5,12 +5,16 @@ namespace SOLID___Exercise.Loggers
 {
     public interface ILogger
     {
-        IReadOnlyCollection<IAppender> Appenders { get; }
+        IAppender[] Appenders { get; }
 
-        void AddAppender(IAppender appender);
+        void Info(string  datetime, string message);
 
-        void Error(string  datetime, string message);
+        void Warning(string datetime, string message);
 
-        void Info(string datetime, string message);
+        void Error(string datetime, string message);
+
+        void Critical(string datetime, string message);
+
+        void Fatal(string datetime, string message);
     }
 }

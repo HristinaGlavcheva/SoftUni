@@ -1,4 +1,5 @@
-﻿using SOLID___Exercise.Appenders;
+﻿using System;
+using SOLID___Exercise.Appenders;
 using SOLID___Exercise.Enums;
 using System.Collections.Generic;
 
@@ -6,39 +7,60 @@ namespace SOLID___Exercise.Loggers
 {
     public class Logger : ILogger
     {
-        private List<IAppender> appenders;
+        private IAppender[] appenders;
 
-        public Logger(params IAppender[] allAppenders)
+        public Logger(params IAppender[] appenders)
         {
-            this.appenders = new List<IAppender>();
+            this.Appenders = appenders;
+        }
 
-            foreach (var appender in allAppenders)
+        public IAppender[] Appenders
+        {
+            get
             {
-                this.appenders.Add(appender);
+                return this.appenders;
+            }
+            private set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException(nameof(Appenders), "value cannot be null");
+                }
+
+                this.appenders = value;
             }
         }
 
-        public IReadOnlyCollection<IAppender> Appenders { get; }
-
-        public void AddAppender(IAppender appender)
+        public void Info(string datetime, string message)
         {
-            this.appenders.Add(appender);
+            AppendForAllAppenders(datetime, ReportLevel.Info, message);
+        }
+
+        public void Warning(string datetime, string message)
+        {
+            AppendForAllAppenders(datetime, ReportLevel.Warning, message);
         }
 
         public void Error(string datetime, string message)
         {
-            foreach (var appender in appenders)
-            {
-                appender.Append(datetime, ReportType.Error, message);
-            }
+            AppendForAllAppenders(datetime, ReportLevel.Error, message);
         }
 
+        public void Critical(string datetime, string message)
+        {
+            AppendForAllAppenders(datetime, ReportLevel.Critical, message);
+        }
 
-        public void Info(string datetime, string message)
+        public void Fatal(string datetime, string message)
+        {
+            AppendForAllAppenders(datetime, ReportLevel.Fatal, message);
+        }
+
+        private void AppendForAllAppenders(string datetime, ReportLevel reportLevel, string message)
         {
             foreach (var appender in appenders)
             {
-               appender.Append(datetime, ReportType.Info, message);
+                appender.Append(datetime, reportLevel, message);
             }
         }
     }

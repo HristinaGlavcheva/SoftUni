@@ -6,7 +6,9 @@ namespace SOLID___Exercise.Appenders
     public interface IAppender
     {
         ILayout Layout { get; }
+
+        ReportLevel ReportLevel { get; set; }
         
-        void Append(string datetime, ReportType reportType, string message);
+        void Append(string datetime, ReportLevel reportLevel, string message);
     }
 }

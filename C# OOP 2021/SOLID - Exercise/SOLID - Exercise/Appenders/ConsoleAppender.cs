@@ -13,9 +13,14 @@ namespace SOLID___Exercise.Appenders
 
         public ILayout Layout { get; }
 
-        public void Append(string datetime, ReportType reportType, string message)
+        public ReportLevel ReportLevel { get; set; }
+
+        public void Append(string datetime, ReportLevel reportLevel, string message)
         {
-            Console.WriteLine(this.Layout.Format, datetime, reportType, message);
+            if (this.ReportLevel <= reportLevel)
+            {
+                Console.WriteLine(this.Layout.Format, datetime, reportLevel, message);
+            }
         }
     }
 }

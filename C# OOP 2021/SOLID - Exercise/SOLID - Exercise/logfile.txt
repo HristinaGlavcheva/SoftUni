@@ -1,4 +1,8 @@
-3/26/2015 2:08:11 PM - Error - Error parsing JSON.
-3/26/2015 2:08:11 PM - Info - User Pesho successfully registered.
-3/26/2015 2:08:11 PM - Error - Error parsing JSON.
-3/26/2015 2:08:11 PM - Info - User Pesho successfully registered.
+3/31/2015 5:33:07 PM - Error - Error parsing request
+3/31/2015 5:33:07 PM - Critical - No connection string found in App.config
+3/31/2015 5:33:07 PM - Fatal - mscorlib.dll does not respond
+3/31/2015 5:33:07 PM - Critical - No connection string found in App.config
+3/31/2015 5:33:07 PM - Fatal - mscorlib.dll does not respond
+3/31/2015 5:33:07 PM - Error - Error parsing request
+3/31/2015 5:33:07 PM - Critical - No connection string found in App.config
+3/31/2015 5:33:07 PM - Fatal - mscorlib.dll does not respond

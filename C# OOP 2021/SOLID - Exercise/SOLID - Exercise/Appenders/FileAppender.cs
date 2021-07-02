@@ -17,9 +17,14 @@ namespace SOLID___Exercise.Appenders
 
         public ILogFile LogFile { get; }
 
-        public void Append(string datetime, ReportType reportType, string message)
+        public ReportLevel ReportLevel { get; set; }
+
+        public void Append(string datetime, ReportLevel reportLevel, string message)
         {
-            this.LogFile.Write(String.Format(this.Layout.Format, datetime, reportType, message));
+            if (this.ReportLevel <= reportLevel)
+            {
+                this.LogFile.Write(String.Format(this.Layout.Format, datetime, reportLevel, message));
+            }
         }
     }
 }
