@@ -1,67 +1,45 @@
-﻿using System;
-using SOLID___Exercise.Appenders;
-using SOLID___Exercise.Enums;
+﻿using System.Text;
 using System.Collections.Generic;
+
+using SOLID___Exercise.Appenders;
+using SOLID___Exercise.Errors;
 
 namespace SOLID___Exercise.Loggers
 {
     public class Logger : ILogger
     {
-        private IAppender[] appenders;
+        private ICollection<IAppender> appenders;
 
-        public Logger(params IAppender[] appenders)
+        public Logger(ICollection<IAppender> appenders)
         {
-            this.Appenders = appenders;
+            this.appenders = appenders;
         }
 
-        public IAppender[] Appenders
+        public IReadOnlyCollection<IAppender> Appenders
+            => (IReadOnlyCollection<IAppender>)this.appenders;
+
+        public void Log(IError error)
         {
-            get
+            foreach (var appender in this.appenders)
             {
-                return this.appenders;
-            }
-            private set
-            {
-                if (value == null)
+                if(appender.ReportLevel <= error.ReportLevel)
                 {
-                    throw new ArgumentNullException(nameof(Appenders), "value cannot be null");
+                    appender.Append(error);
                 }
-
-                this.appenders = value;
             }
         }
 
-        public void Info(string datetime, string message)
+        public override string ToString()
         {
-            AppendForAllAppenders(datetime, ReportLevel.Info, message);
-        }
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("Logger info");
 
-        public void Warning(string datetime, string message)
-        {
-            AppendForAllAppenders(datetime, ReportLevel.Warning, message);
-        }
-
-        public void Error(string datetime, string message)
-        {
-            AppendForAllAppenders(datetime, ReportLevel.Error, message);
-        }
-
-        public void Critical(string datetime, string message)
-        {
-            AppendForAllAppenders(datetime, ReportLevel.Critical, message);
-        }
-
-        public void Fatal(string datetime, string message)
-        {
-            AppendForAllAppenders(datetime, ReportLevel.Fatal, message);
-        }
-
-        private void AppendForAllAppenders(string datetime, ReportLevel reportLevel, string message)
-        {
-            foreach (var appender in appenders)
+            foreach (var appender in this.appenders)
             {
-                appender.Append(datetime, reportLevel, message);
+                sb.AppendLine(appender.ToString());
             }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }

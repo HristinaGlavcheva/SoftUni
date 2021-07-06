@@ -1,20 +1,14 @@
 ﻿using System.Collections.Generic;
+
 using SOLID___Exercise.Appenders;
+using SOLID___Exercise.Errors;
 
 namespace SOLID___Exercise.Loggers
 {
     public interface ILogger
     {
-        IAppender[] Appenders { get; }
+        IReadOnlyCollection<IAppender> Appenders { get; }
 
-        void Info(string  datetime, string message);
-
-        void Warning(string datetime, string message);
-
-        void Error(string datetime, string message);
-
-        void Critical(string datetime, string message);
-
-        void Fatal(string datetime, string message);
+        void Log(IError error);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using SOLID___Exercise.Enums;
+using SOLID___Exercise.Errors;
 using SOLID___Exercise.Layouts;
 
 namespace SOLID___Exercise.Appenders
@@ -7,8 +8,10 @@ namespace SOLID___Exercise.Appenders
     {
         ILayout Layout { get; }
 
-        ReportLevel ReportLevel { get; set; }
+        ReportLevel ReportLevel { get; }
+
+        int CoutnMessagesAppended { get; }
         
-        void Append(string datetime, ReportLevel reportLevel, string message);
+        void Append(IError error);
     }
 }

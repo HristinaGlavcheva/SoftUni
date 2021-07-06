@@ -1,19 +1,37 @@
 ﻿using System;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+
+using SOLID___Exercise.Common;
+using SOLID___Exercise.Errors;
+using SOLID___Exercise.IO;
+using SOLID___Exercise.Layouts;
 
 namespace SOLID___Exercise.Loggers
 {
     public class LogFile : ILogFile
     {
-        private const string LogFilePath = "../../../logfile.txt";
-        
-        public void Write(string text)
+        private IOManager IOManager;
+
+        public LogFile(string folderName, string fileName)
         {
-            File.AppendAllText(LogFilePath, text + Environment.NewLine);
+            this.IOManager = new IOManager(folderName, fileName);
+            this.IOManager.EnsureDirectoryAndFileExist();
         }
 
+        public string Path => this.IOManager.CurrentFilePath;
+
         public int Size
-            => File.ReadAllText(LogFilePath).Where(char.IsLetter).Sum(x => x);
+            => File.ReadAllText(this.Path).Where(char.IsLetter).Sum(ch => ch);
+
+        string ILogFile.Write(ILayout layout, IError error)
+        {
+            string formattedMessage = string.Format(layout.Format, error.DateTime.ToString(GlobalConstants.DatetimeFormat, CultureInfo.InvariantCulture),
+                    error.ReportLevel,
+                    error.Message) + Environment.NewLine;
+            
+            return formattedMessage;
+        }
     }
 }
