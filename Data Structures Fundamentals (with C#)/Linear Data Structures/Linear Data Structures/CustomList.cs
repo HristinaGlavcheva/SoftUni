@@ -15,9 +15,6 @@ namespace Linear_Data_Structures
 
         public int Count { get; private set; }
 
-        public int InternalArrayCount
-            => this.array.Length;
-
         public T this[int index]
         {
             get
@@ -74,16 +71,26 @@ namespace Linear_Data_Structures
 
         public bool Remove(T item)
         {
-            for (int i = 0; i < this.Count; i++)
+            if (!this.Contains(item))
             {
-                if (this.array[i].Equals(item))
-                {
-                    this.RemoveAt(i);
-                    return true;
-                }
+                return false;
             }
 
-            return false;
+            int index = this.IndexOf(item);
+            this.RemoveAt(index);
+
+            return true;
+            
+            //for (int i = 0; i < this.Count; i++)
+            //{
+            //    if (this.array[i].Equals(item))
+            //    {
+            //        this.RemoveAt(i);
+            //        return true;
+            //    }
+            //}
+
+            //return false;
         }
 
         public int IndexOf(T item)
@@ -103,30 +110,32 @@ namespace Linear_Data_Structures
         {
             this.ValidateIndex(index);
             this.EnsureCapacity();
+            this.Count++;
 
             for (int i = this.Count; i > index; i--)
             {
                 this.array[i] = this.array[i - 1];
             }
 
-            this.Count++;
             this.array[index] = item;
         }
 
         private void EnsureCapacity()
         {
-            if (this.Count == this.array.Length)
+            if (this.Count < this.array.Length)
             {
-                T[] doubledSizeArray = new T[array.Length * 2];
-
-                for (int i = 0; i < array.Length; i++)
-                {
-                    doubledSizeArray[i] = array[i];
-                }
-                //Array.Copy(this.array, doubledSizeArray, this.array.Length);
-
-                this.array = doubledSizeArray;
+                return;
             }
+
+            T[] doubledSizeArray = new T[array.Length * 2];
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                doubledSizeArray[i] = array[i];
+            }
+            //Array.Copy(this.array, doubledSizeArray, this.array.Length);
+
+            this.array = doubledSizeArray;
         }
 
         private void ValidateIndex(int index)
