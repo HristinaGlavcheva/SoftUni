@@ -127,11 +127,11 @@ namespace Linear_Data_Structures
                 return;
             }
 
-            T[] doubledSizeArray = new T[array.Length * 2];
+            T[] doubledSizeArray = new T[this.array.Length * 2];
 
-            for (int i = 0; i < array.Length; i++)
+            for (int i = 0; i < this.array.Length; i++)
             {
-                doubledSizeArray[i] = array[i];
+                doubledSizeArray[i] = this.array[i];
             }
             //Array.Copy(this.array, doubledSizeArray, this.array.Length);
 
