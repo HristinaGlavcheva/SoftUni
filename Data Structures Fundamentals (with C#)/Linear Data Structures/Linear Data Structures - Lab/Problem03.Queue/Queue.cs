@@ -96,7 +96,7 @@
         {
             if(this._head == null)
             {
-                throw new InvalidOperationException("The queue is empty!");
+                throw new InvalidOperationException("The quere is empty!");
             }
         }
     }
