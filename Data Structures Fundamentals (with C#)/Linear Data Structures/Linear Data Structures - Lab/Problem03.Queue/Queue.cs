@@ -12,30 +12,92 @@
 
         public bool Contains(T item)
         {
-            throw new NotImplementedException();
+            Node<T> currentNode = this._head;
+
+            while (currentNode != null)
+            {
+                if(currentNode.Value.Equals(item))
+                {
+                    return true;
+                }
+
+                currentNode = currentNode.Next;
+            }
+
+            return false;
         }
 
         public T Dequeue()
         {
-            throw new NotImplementedException();
+            this.EnsureNotEmpty();
+
+            Node<T> oldHead = this._head;
+
+            if (this._head.Next == null)
+            {
+                this._head = null;
+            }
+            else
+            {
+                Node<T> newHead = this._head.Next;
+                this._head = newHead;
+            }
+
+            this.Count--;
+
+            return oldHead.Value;
         }
 
         public void Enqueue(T item)
         {
-            throw new NotImplementedException();
+            Node<T> newNode = new Node<T>(item);
+
+            if (this._head == null)
+            {
+                this._head = newNode;
+            }
+            else
+            {
+                Node<T> current = this._head;
+
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+
+                current.Next = newNode;
+            }
+
+            this.Count++;
         }
 
         public T Peek()
         {
-            throw new NotImplementedException();
+            this.EnsureNotEmpty();
+
+            return this._head.Value;
         }
 
         public IEnumerator<T> GetEnumerator()
         {
-            throw new NotImplementedException();
+            Node<T> currentNode = this._head;
+
+            while (currentNode != null)
+            {
+                yield return currentNode.Value;
+                currentNode = currentNode.Next;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
-            => throw new NotImplementedException();
+            => this.GetEnumerator();
+
+        private void EnsureNotEmpty()
+        {
+            if(this._head == null)
+            {
+                throw new InvalidOperationException("The queue is empty!");
+            }
+        }
     }
 }

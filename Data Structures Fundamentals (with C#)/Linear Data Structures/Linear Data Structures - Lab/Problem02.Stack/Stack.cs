@@ -12,7 +12,6 @@
 
         public bool Contains(T item)
         {
-            bool contains = false;
             Node<T> currentNode = this._top;
 
             while (currentNode != null)
@@ -25,7 +24,7 @@
                 currentNode = currentNode.Next;
             }
 
-            return contains;
+            return false;
         }
 
         public T Peek()
