@@ -4,7 +4,7 @@
     {
         public Node(T item)
         {
-            this.Item = item;
+            Item = item;
         }
 
         public T Item { get; set; }
