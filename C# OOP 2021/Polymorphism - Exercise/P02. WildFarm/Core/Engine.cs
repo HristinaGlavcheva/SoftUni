@@ -12,7 +12,7 @@ namespace P02._WildFarm.Core
     {
         private FoodFactory foodFactory;
         private AnimalFactory animalFactory;
-        private List<Animal> animals;
+        private ICollection<Animal> animals;
 
         public Engine()
         {
@@ -34,6 +34,7 @@ namespace P02._WildFarm.Core
               .ToArray();
 
                     Animal animal = this.animalFactory.CreateAnimal(animalArgs);
+                    Console.WriteLine(animal.ProduceSound());
                     this.animals.Add(animal);
 
                     string[] foodArgs = Console.ReadLine()
@@ -52,7 +53,6 @@ namespace P02._WildFarm.Core
 
             foreach (var animal in this.animals)
             {
-                Console.WriteLine(animal.ProduceSound()); 
                 Console.WriteLine(animal.ToString());
             }
         }
