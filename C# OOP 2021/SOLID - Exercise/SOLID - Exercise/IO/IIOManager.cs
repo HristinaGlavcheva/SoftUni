@@ -1,0 +1,14 @@
+﻿
+namespace SOLID___Exercise.IO
+{
+    public interface IIOManager
+    {
+        string CurrentDirectoryPath { get; }
+
+        string CurrentFilePath { get; }
+
+        string GetCurrentDirectory();
+
+        void EnsureDirectoryAndFileExist();
+    }
+}
