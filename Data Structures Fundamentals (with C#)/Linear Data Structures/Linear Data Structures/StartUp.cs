@@ -39,18 +39,20 @@ namespace Linear_Data_Structures
             //Console.WriteLine();
             //Console.WriteLine(list.Count);
 
-            CustomStack<int> stack = new CustomStack<int>();
+            //CustomStack<int> stack = new CustomStack<int>();
 
-            for (int i = 0; i < 10; i++)
-            {
-                stack.Push(i);
-            }
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    stack.Push(i);
+            //}
 
-            foreach (var item in stack)
-            {
-                Console.WriteLine(item);
-            }
-            
+            //foreach (var item in stack)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //Stack<int> stackInt = new Stack<int>();
+            //LinkedListNode<int> linkedListNode = new LinkedListNode<int>(5);
         }
     }
 }
