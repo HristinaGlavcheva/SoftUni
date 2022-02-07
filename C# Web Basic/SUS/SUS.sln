@@ -13,9 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUS.MvcFramework.Tests", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleCards", "Apps\BattleCards\BattleCards.csproj", "{6204167A-64AF-4AED-A891-F178B981DD6C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Suls", "Apps\Suls\Suls.csproj", "{DD79BC92-4BDA-4411-B298-7FD7C705D911}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MySulsExam", "MySulsExam\MySulsExam.csproj", "{EB57D32C-CAF4-4B1F-966B-904634907358}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MySulsExam", "MySulsExam\MySulsExam.csproj", "{EB57D32C-CAF4-4B1F-966B-904634907358}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +37,6 @@ Global
 		{6204167A-64AF-4AED-A891-F178B981DD6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6204167A-64AF-4AED-A891-F178B981DD6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6204167A-64AF-4AED-A891-F178B981DD6C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD79BC92-4BDA-4411-B298-7FD7C705D911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD79BC92-4BDA-4411-B298-7FD7C705D911}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD79BC92-4BDA-4411-B298-7FD7C705D911}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD79BC92-4BDA-4411-B298-7FD7C705D911}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB57D32C-CAF4-4B1F-966B-904634907358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB57D32C-CAF4-4B1F-966B-904634907358}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB57D32C-CAF4-4B1F-966B-904634907358}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,7 +47,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6204167A-64AF-4AED-A891-F178B981DD6C} = {D058481A-B479-499D-ADB8-9108A526A334}
-		{DD79BC92-4BDA-4411-B298-7FD7C705D911} = {D058481A-B479-499D-ADB8-9108A526A334}
 		{EB57D32C-CAF4-4B1F-966B-904634907358} = {D058481A-B479-499D-ADB8-9108A526A334}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

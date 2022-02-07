@@ -67,10 +67,10 @@ namespace ProductShop
         {
             const string rootElement = "Users";
 
-            var importUsersDTOs = XMLConverter.Deserializer<ImportUsersDTO>(inputXml, rootElement);
+            //var importUsersDTOs = XMLConverter.Deserializer<ImportUsersDTO>(inputXml, rootElement);
 
-            //XmlSerializer serializer = new XmlSerializer(typeof(List<ImportUsersDTO>), new XmlRootAttribute("Users"));
-            //var importUsersDTOs = (List<ImportUsersDTO>)serializer.Deserialize(new StringReader(inputXml));
+            XmlSerializer serializer = new XmlSerializer(typeof(List<ImportUsersDTO>), new XmlRootAttribute("Users"));
+            var importUsersDTOs = (List<ImportUsersDTO>)serializer.Deserialize(new StringReader(inputXml));
 
             //List<User> users = new List<User>();
 
