@@ -19,7 +19,7 @@ namespace Suls.Data
         [MaxLength(20)]
         public string Name { get; set; }
 
-        public byte Points { get; set; }
+        public ushort Points { get; set; }
 
         public virtual ICollection<Submission> Submissions { get; set; }
     }

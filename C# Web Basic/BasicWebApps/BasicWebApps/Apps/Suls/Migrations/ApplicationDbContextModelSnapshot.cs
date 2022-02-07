@@ -29,8 +29,8 @@ namespace Suls.Migrations
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.Property<byte>("Points")
-                        .HasColumnType("tinyint");
+                    b.Property<int>("Points")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -53,23 +53,17 @@ namespace Suls.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("ProblemId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ProblemId1")
+                    b.Property<string>("ProblemId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId1")
+                    b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProblemId1");
+                    b.HasIndex("ProblemId");
 
-                    b.HasIndex("UserId1");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Submissions");
                 });
@@ -101,11 +95,11 @@ namespace Suls.Migrations
                 {
                     b.HasOne("Suls.Data.Problem", "Problem")
                         .WithMany("Submissions")
-                        .HasForeignKey("ProblemId1");
+                        .HasForeignKey("ProblemId");
 
                     b.HasOne("Suls.Data.User", "User")
                         .WithMany("Submissions")
-                        .HasForeignKey("UserId1");
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Problem");
 
